@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Shirt Store</title>
+</head>
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="logo">
+            <h3>SHIRTSTORE</h3>     
+        </a>
+
+        <div class="Nametext">
+            <h2>SHIRTSTORE BY MART LAEMBANG .COM</h2>
+        </div>    
+</nav>
+    <button class="btnLogin-popup">Login</button>
+    <script src="script.js"></script>
+    
+</header>
+<body>
+    <div class="hero">
+        <div class="form-box"></div>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+            </div>
+    </div>
+    
+    <form id="register" class="input-group">
+        <input type="text" class="input-field" placeholder="Email Address">
+        <input type="text" class="input-field" placeholder="Password">
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
+    
+    <form id="login"class="input-group">
+        <input type="text" class="input-field" placeholder="Email Address">
+        <input type="text" class="input-field" placeholder="Password">
+        <button type="submit" class="submit-btn">Login</button>
+    </form>
+
+    <div class="text1">
+        <h5>Email Address</h5>
+    </div>
+    
+    <div class="text2">
+        <h5>Password</h5>
+    </div>
+    
+    <div class="text3">
+        <h5>Or</h5>
+    </div>
+
+    <div class="media-options">
+        <a href="#" class="field facebook">
+            <img src="facebook.png" alt="" class="facebook-img">
+            <span>Login with Facebook</span>
+        </a>
+    </div>
+
+    <div class="media-google">
+        <a href="#"class="field google">
+            <img src="google.png" alt="" class="google-img">
+            <span>Login with Google</span>
+        </a>
+    </div>
+    </div>  
+    
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function login(){
+            x.style.display = "50px";
+            y.style.display = "450px";
+            z.style.display = "100px";
+        }
+        
+        function register(){
+            x.style.display = "-400px";
+            y.style.display = "50px";
+            z.style.display = "110px";
+        }
+    </script>
+</body>
+</html>
