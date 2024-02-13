@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ 
+ header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 14px;
+    background: rgb(255, 255, 255);
+ }
+ 
+ .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    padding-right: 30%;
+    height:70px;
+ }
+ 
+ .navbar .logo img {
+    padding-top: 10px;
+    width: 70px;
+    margin-right: auto;
+ }
+ 
+ .navbar .logo  {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    
+ }
+ 
+ .navbar .logo h3{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-right: 450px;
+ }
+ .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+ }
+ 
+ .btnLogin-popup {
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    
+ }
+ 
+ .btnLogin-popup:hover {
+    scale: 1.01;
+    color: #fff;
+ }
+ 
+ .banner{
+    background-color: #000;
+    display :flex;
+    justify-content: right;
+    align-items: center;
+    max-width: 100%;
+    /* border: 1px solid blue; */
+     
+ }
+ 
+ .banner-info {
+    display :flex;
+ }
+ 
+ .banner-info img{
+    width:400px;
+    height:800px;
+ }
+ 
+ .banner .promo{
+    color:#fff;
+    
+    width: 100%;
+    height: 800px;
+   
+ }
+
+ .banner .promo img{
+   margin-top: 14%;
+   margin-left: 7%;
+   width: 340px;
+   height:751px;
+   
+   
+ }
+ 
+ .wordfooter-info {
+   text-align:center;
+   color: #fff;
+   background-color: #000;
+   padding-top:7.5px; 
+   font-size: 43px;
+    
+ }
