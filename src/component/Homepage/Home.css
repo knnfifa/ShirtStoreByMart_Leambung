@@ -1,47 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
+
+.banner-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh; /* ปรับเป็นค่าที่ responsive */
+  margin-top: 0.15%;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: flex 0.8s ease;
+}
+
+.item:nth-child(1) {
+  background-image: url(./Picture/promo.png);
+}
+
+.item:nth-child(2) {
+  background-image: url(./Picture/rs.png);
+}
+
+.item:nth-child(3) {
+  background-image: url(./Picture/kdb.png);
+}
+
+.item:nth-child(4) {
+  background-image: url(./Picture/nn.png);
+}
+
+.item:nth-child(5) {
+  background-image: url(./Picture/mt.png);
+}
+
+
+.item:hover {
+  flex: 2;
+}
+
+/* เพิ่ม media query สำหรับการปรับเปลี่ยนที่ responsive */
+@media (max-width: 768px) {
   .banner-info {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 651px;
-      margin-top: 0.15%;
+      flex-direction: column;
+      height: auto;
   }
   
   .item {
       flex: 1;
-      height: 100%;
+      height: 50vh; /* ปรับเป็นค่าที่ responsive */
   }
-  
-  
-    .item:nth-child(1) {
-      background-image: url(./Picture/promo.png);
-    }
-    .item:nth-child(2) {
-      background-image: url(./Picture/rs.png);
-    }
-    .item:nth-child(3) {
-      background-image: url(./Picture/kdb.png);
-    }
-    .item:nth-child(4) {
-      background-image: url(./Picture/nn.png);
-    }
-    .item:nth-child(5) {
-      background-image: url(./Picture/mt.png);
-    }
-  
-  
-    .item {
-        background-position: center;
-        background-size: cover;
-        transition: flex 0.8s ease;
-    }
-  
-    .item:hover {
-        flex: 2;
-    }
-   
+}
