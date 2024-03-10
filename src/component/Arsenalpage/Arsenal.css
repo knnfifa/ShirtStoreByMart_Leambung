@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh; /* กำหนดความสูงเต็มหน้าจอ */
-  margin-top: -14vh;
+  margin-top: -11vh;
 }
 
 .Logo-Arse-info {
@@ -43,8 +43,8 @@ h1, h2, h3 {
 }
 
 .product-image {
-  width: 100%; /* ให้รูปภาพใช้พื้นที่เต็มของคอนเทนเนอร์ */
-  height: auto; /* รักษาอัตราส่วน */
+  width: 273px; /* ให้รูปภาพใช้พื้นที่เต็มของคอนเทนเนอร์ */
+  height: 364px; /* รักษาอัตราส่วน */
 }
 
 .product-name {
