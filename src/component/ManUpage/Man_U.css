@@ -51,6 +51,8 @@ h1, h2, h3 {
   font-size: 16px;
   font-weight: bold;
   margin: 5px 0;
+  color: #fff;
+
 }
 
 .product-price {
