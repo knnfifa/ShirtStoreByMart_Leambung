@@ -1,0 +1,54 @@
+/* Nav.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 30%; /* เปลี่ยนการกำหนดของ padding-right จากค่าคงที่เป็นเปอร์เซ็นต์ เพื่อให้กำหนดขนาดเฉพาะในทุกขนาดหน้าจอ */
+    height: 70px;
+    background-color: #fff; /* เพิ่มสีพื้นหลังให้ Navbar */
+    color: #000; /* เปลี่ยนสีข้อความใน Navbar เป็นขาว */
+    font-size: 18px; /* เพิ่มขนาดตัวอักษรใน Navbar */
+    padding: 0 20px; /* เพิ่มการระบุ padding ด้านซ้ายและด้านขวา */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ Navbar */
+}
+  
+.navbar .logo {
+    background-image: url(./Homepage/Picture/logo.png);
+    width: 75px;
+    height: 50px;
+    display: flex;
+}
+  
+.navbar a {
+    text-decoration: none; /* ลบขีดเส้นใต้ลิงก์ */
+    color: #000; /* เปลี่ยนสีของลิงก์ใน Navbar เป็นขาว */
+}
+  
+.navbar a h3{
+    margin-left: 80px;
+    margin-top: 10px;
+}
+  
+.btnLogin-popup {
+    background-color: transparent; /* เปลี่ยนสีพื้นหลังของปุ่มเป็นโปร่งใส */
+    color: #000; /* เปลี่ยนสีของตัวหนังสือบนปุ่มเป็นขาว */
+    border: 1px solid #000; /* เพิ่มเส้นขอบสีขาว */
+    padding: 10px 20px; /* เพิ่มการระบุ padding */
+    border-radius: 5px; /* เพิ่มขอบมนของปุ่ม */
+    cursor: pointer; /* ทำให้เมาส์เป็นรูปแบบแสดงว่าเป็นลิงก์คลิก */
+    transition: background-color 0.3s, color 0.3s; /* เพิ่มเอฟเฟคการเปลี่ยนสีเมื่อโฮเวอร์ */
+}
+  
+.btnLogin-popup:hover {
+    background-color: #000; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+    color: #fff; /* เปลี่ยนสีของตัวหนังสือเมื่อโฮเวอร์ */
+}
+
+/* vdhvuh */

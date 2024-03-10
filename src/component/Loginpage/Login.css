@@ -1,85 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-header { 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 8px 14px;
-    background: rgb(255, 255, 255);
-    border-bottom: 1px solid #333;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo img {
-    width: 40px;
-    margin-right: auto;
-}
-
-.navbar .logo  {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    text-decoration: none;
-}
-
-.navbar .logo h3{
-    font-size: 15px;
-    font-weight: 600;
-    color: black;
-    margin-right: 450px;
-}
-.head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none
-}
-
-.btnLogin-popup {
-    background-color: black;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btnLogin-popup:hover {
-    scale: 1.01;
-    color: #fff;
 }
 
 body {
     width: 100%;
     height: 100vh;
-    
-    background: url(picture/5000.jpg)center / cover no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: url('./Picture/bglogin.png') center;
     overflow: hidden;
 }
 
-
 .form-box {
-    top: 100px;
+    top: 20px;
     width: 560px;
     height: 500px;
     border-radius: 20px;
@@ -122,20 +55,20 @@ body {
     height: 80%;
     background: #000000;
     border-radius: 10px;
-    transition: .5s;
+    transition: 0.5s;
     z-index: 1; 
 }
 
 .input-group {
-    top: 130px;
-    position: absolute;
+    top: 80px;
+    position: relative;
     width: 450px;
     transition: .5s;
 }
 
 .input-field {
     width: 100%;
-    height: 25px 0;
+    height: 25px;
     margin: 35px 0;
     padding-bottom: 8px;
     border-left: 0;
@@ -183,3 +116,6 @@ body {
     left: 1px;
     position: absolute;
 }
+
+
+/* ijgo */
