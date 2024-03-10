@@ -8,11 +8,12 @@ class Homepage extends React.Component {
         return (
             <>
                 <div className="banner-info">
+                    
                     <div className="item"></div> 
-                    <div className="item"></div>
-                    <div className="item"></div>
-                    <div className="item"></div>
-                    <div className="item"></div>
+                    <a href="/ManUpage" className="item"></a>
+                    <a href="/Mancipage" className="item"></a>
+                    <a href="/Liverpoolpage" className="item"></a>
+                    <a href="/Arsenalpage" className="item"></a>
                 </div>
                 
 
