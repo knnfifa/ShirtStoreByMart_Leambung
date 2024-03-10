@@ -34,7 +34,7 @@ class Liver extends Component {
               </div>
             </center>
             <center><h1 style={{ color: 'white' }}>Liverpool FC</h1></center>
-            <center><h2 style={{ color: 'white' }}>{products.length} Product</h2></center>
+            <center><h2 style={{ color: 'white' }}>{products.length} Products</h2></center>
     
             {/* Display the product data */}
             <div className="product-list">
