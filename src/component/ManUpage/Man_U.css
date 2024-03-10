@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Logo-Man_U-info {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.Logo-Man_U {
+    background-image: url(./Picture/LogoManU.png);
+}
