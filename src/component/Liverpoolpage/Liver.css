@@ -1,40 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.Logo-Liver-info {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    /* margin-top: 10%; */
-}
-
-.Logo-Liver {
-    background-image: url(./Pict/Liverpool.png);
-}
-.Manci-info h1,
-.Manci-info h2 {
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .Liver-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* กำหนดความสูงเต็มหน้าจอ */
-    margin-top: -37vh; 
-  }
-  
-  .Logo-Liver-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .Logo-Liver {
-    max-width: 100%; /* ทำให้โลโก้ยังคงขนาดเท่าเดิม */
-    height: auto; /* ทำให้โลโก้ยังคงสัดส่วน */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* กำหนดความสูงเต็มหน้าจอ */
+  margin-top: -12vh;
+}
+
+.Logo-Liver-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Logo-Liver {
+  background-image: url(./Pict/Liverpool.png);
+}
+
+h1, h2, h3 {
+  margin: 10px 0; /* เพิ่มขอบให้กับหัวข้อ */
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%; /* ให้รูปภาพใช้พื้นที่เต็มของคอนเทนเนอร์ */
+  height: auto; /* รักษาอัตราส่วน */
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #a0a0a0;
+}
