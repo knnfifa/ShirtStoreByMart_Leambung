@@ -18,5 +18,5 @@ class Man_U extends React.Component {
         );
     }
 }
-// dvhdhv
+
 export default Man_U;

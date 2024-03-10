@@ -60,5 +60,5 @@ class LoginPage extends React.Component {
         );
     }
 }
-// dvojduhh
+
 export default LoginPage;

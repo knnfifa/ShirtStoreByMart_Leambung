@@ -14,7 +14,7 @@ class Homepage extends React.Component {
                 </div>
 
                 <Footer />
-                 {/* ikrgpr */}
+                 
             </>
         );
     }
