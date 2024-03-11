@@ -15,7 +15,8 @@ collections = {
     "collection2": db["shirtmancity"],
     "collection3": db["shirtLiver"],
     "collection4": db["shirtarsenal"],
-    "detail1": db["manushirt"]
+    "detail1": db["manushirt"],
+    "detail2":db["lfcdetails"]
 }
 
 @app.route("/")
@@ -238,6 +239,51 @@ def update_manushirt(manushirt_id):
 @app.route("/manushirt/<int:manushirt_id>", methods=["DELETE"])
 def delete_manushirt(manushirt_id):
     result = collections["detail1"].delete_one({"_id": manushirt_id})
+    if result.deleted_count:
+        return jsonify({"message": "Shirt deleted successfully"}), 200
+    else:
+        return jsonify({"error": "Shirt not found"}), 404
+
+
+#------------------------------------------------------------------------------------------------------
+#LFCshisrt
+@app.route("/lfcdetails", methods=["GET"])
+def get_all_lfcdetails():
+    lfcdetails = list(collections["detail2"].find())
+    return jsonify(lfcdetails)
+
+@app.route("/lfcdetails/<int:lfcdetails_id>", methods=["GET"])
+def get_lfcdetails(lfcdetails_id):
+    lfcdetails = collections["detail2"].find_one({"_id": lfcdetails_id})
+    if lfcdetails:
+        return jsonify(lfcdetails)
+    else:
+        return jsonify({"error": "product not found"}), 404
+    
+@app.route("/lfcdetails", methods=["POST"])
+def create_lfcdetails():
+    data = request.get_json()
+    existing_lfcdetails = collections["detail2"].find_one({"lfcdetails_code": data["lfcdetails_code"]})
+    if existing_lfcdetails:
+        return jsonify({"error": "Shirt with the same product code already exists"}), 409
+    else:
+        collections["detail2"].insert_one(data)
+        return jsonify({"message": "Shirt created successfully"}), 201
+
+@app.route("/lfcdetails/<int:lfcdetails_id>", methods=["PUT"])
+def update_lfcdetails(lfcdetails_id):
+    data = request.get_json()
+    existing_lfcdetails = collections["detail2"].find_one({"_id": lfcdetails_id})
+    if existing_lfcdetails:
+        collections["detail2"].update_one({"_id": lfcdetails_id}, {"$set": data})
+        updated_lfcdetails = collections["detail2"].find_one({"_id": lfcdetails_id})
+        return jsonify(updated_lfcdetails)
+    else:
+        return jsonify({"error": "shirt not found"}), 404
+    
+@app.route("/lfcdetails/<int:lfcdetails_id>", methods=["DELETE"])
+def delete_lfcdetails(lfcdetails_id):
+    result = collections["detail2"].delete_one({"_id":lfcdetails_id})
     if result.deleted_count:
         return jsonify({"message": "Shirt deleted successfully"}), 200
     else:
