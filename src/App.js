@@ -1,3 +1,4 @@
+// src/App.js
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Nav from "./component/Nav";
@@ -7,7 +8,7 @@ import ManUpage from "./component/ManUpage/Man_U";
 import Mancipage from "./component/Mancipage/Manci";
 import Liverpoolpage from "./component/Liverpoolpage/Liver";
 import Arsenalpage from "./component/Arsenalpage/Arsenal";
-
+import Liverdetailpage from "./component/Liverdetailpage/Liverdetail";
 
 function App() {
   return (
@@ -32,14 +33,25 @@ function App() {
             <Mancipage />
           </Route>
 
+          {/* Route for Liverpool page */}
           <Route exact path="/Liverpoolpage">
             <Liverpoolpage />
           </Route>
 
+          {/* Route for Arsenal page */}
           <Route exact path="/Arsenalpage">
             <Arsenalpage />
           </Route>
 
+          {/* Route for product details */}
+          <Route path="/Liverdetailpage">
+            <Liverdetailpage />
+          </Route>
+
+          {/* Additional route for product details with parameter */}
+          <Route path="/Liverpoolpage">
+            <Liverpoolpage />
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
