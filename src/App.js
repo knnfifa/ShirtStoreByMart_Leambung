@@ -9,6 +9,7 @@ import Mancipage from "./component/Mancipage/Manci";
 import Liverpoolpage from "./component/Liverpoolpage/Liver";
 import Arsenalpage from "./component/Arsenalpage/Arsenal";
 import Liverdetailpage from "./component/Liverdetailpage/Liverdetail";
+import Manudetail from "./component/Manudetailpage/manudetail"
 
 function App() {
   return (
@@ -51,6 +52,10 @@ function App() {
           {/* Additional route for product details with parameter */}
           <Route path="/Liverpoolpage">
             <Liverpoolpage />
+          </Route>
+
+          <Route path="/Manudetail">
+            <Manudetail />
           </Route>
         </Switch>
       </div>
