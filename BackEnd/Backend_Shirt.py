@@ -338,7 +338,7 @@ def delete_arsdetail(arsdetail_id):
         return jsonify({"error": "Shirt not found"}), 404
 
 #------------------------------------------------------------------------------------------------------
-#Mancity details
+#Mancity details 55555
 @app.route("/Mancitydetails", methods=["GET"])
 def get_all_Mancitydetails():
     Mancitydetails = list(collections["detail4"].find())
