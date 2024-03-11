@@ -17,7 +17,9 @@ collections = {
     "collection4": db["shirtarsenal"],
     "detail1": db["manushirt"],
     "detail2":db["lfcdetails"],
-    "detail3":db["arsdetail"]
+    "detail3":db["arsdetail"],
+    "detail4":db["Mancitydetails"]
+    
 }
 
 @app.route("/")
@@ -330,6 +332,50 @@ def update_arsdetail(arsdetail_id):
 @app.route("/arsdetail/<int:arsdetail_id>", methods=["DELETE"])
 def delete_arsdetail(arsdetail_id):
     result = collections["detail3"].delete_one({"_id":arsdetail_id})
+    if result.deleted_count:
+        return jsonify({"message": "Shirt deleted successfully"}), 200
+    else:
+        return jsonify({"error": "Shirt not found"}), 404
+
+#------------------------------------------------------------------------------------------------------
+#Mancity details
+@app.route("/Mancitydetails", methods=["GET"])
+def get_all_Mancitydetails():
+    Mancitydetails = list(collections["detail4"].find())
+    return jsonify(Mancitydetails)
+
+@app.route("/Mancitydetails/<int:Mancitydetails_id>", methods=["GET"])
+def get_Mancitydetails(Mancitydetails_id):
+    Mancitydetails = collections["detail3"].find_one({"_id": Mancitydetails_id})
+    if Mancitydetails:
+        return jsonify(Mancitydetails)
+    else:
+        return jsonify({"error": "product not found"}), 404
+    
+@app.route("/Mancitydetails", methods=["POST"])
+def create_Mancitydetails():
+    data = request.get_json()
+    existing_Mancitydetails = collections["detail4"].find_one({"Mancitydetails_code": data["Mancitydetails_code"]})
+    if existing_Mancitydetails:
+        return jsonify({"error": "Shirt with the same product code already exists"}), 409
+    else:
+        collections["detail4"].insert_one(data)
+        return jsonify({"message": "Shirt created successfully"}), 201
+
+@app.route("/Mancitydetails/<int:Mancitydetails_id>", methods=["PUT"])
+def update_Mancitydetails(Mancitydetails_id):
+    data = request.get_json()
+    existing_Mancitydetails = collections["detail4"].find_one({"_id": Mancitydetails_id})
+    if existing_Mancitydetails:
+        collections["detail4"].update_one({"_id": Mancitydetails_id}, {"$set": data})
+        updated_Mancitydetails = collections["detail4"].find_one({"_id": Mancitydetails_id})
+        return jsonify(updated_Mancitydetails)
+    else:
+        return jsonify({"error": "shirt not found"}), 404
+    
+@app.route("/Mancitydetails/<int:Mancitydetails_id>", methods=["DELETE"])
+def delete_Mancitydetails(Mancitydetails_id):
+    result = collections["detail4"].delete_one({"_id":Mancitydetails_id})
     if result.deleted_count:
         return jsonify({"message": "Shirt deleted successfully"}), 200
     else:
